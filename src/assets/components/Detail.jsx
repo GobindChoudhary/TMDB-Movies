@@ -159,7 +159,15 @@ const Detail = () => {
                 </div>
                 <span className="text-xs text-gray-400 mt-1">User Score</span>{" "}
               </div>{" "}
-              <h1 className="text-2xl  cursor-pointer font-bold text-zinc-200 hover:text-[#6556CD] ">
+              <h1
+                onClick={() =>
+                  window.open(
+                    `https://www.imdb.com/title/${detail.imdb_id}`,
+                    "_blank"
+                  )
+                }
+                className="text-2xl  cursor-pointer font-bold text-zinc-200 hover:text-[#6556CD] "
+              >
                 IMDB
               </h1>
             </div>
