@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
-
 const HorizontalCards = (data) => {
   return (
-    <div className="w-[100%] flex overflow-y-hidden  mx-3  gap-4">
+    <div className="flex mx-3 overflow-y-hidden gap-4">
       {data.data.map((item, index) => (
         <Link
           to={`/${item.media_type}/${item.id}`}
           key={index}
-          className="min-w-[20%] h-[40vh] rounded-md mb-2 overflow-hidden bg-zinc-900"
+          className="min-w-[20%] max-w-[25%] h-[40vh] rounded-md mb-2 overflow-hidden bg-zinc-900"
         >
           {/* Image Section */}
           <img
@@ -18,13 +17,13 @@ const HorizontalCards = (data) => {
             alt={item.orignal_title || item.name || item.original_title}
           />
           {/* Content Section */}
-          <div className=" text-white h-[50%] p-2  flex flex-col gap-2 ">
-            <h2 className="text-xl uppercase font-semibold">
+          <div className=" text-white h-[50%] p-2  flex flex-col  ">
+            <h2 className="text-lg uppercase font-medium">
               {item.orignal_title || item.name || item.original_title}
             </h2>
-            <p className=" text-base  text-zinc-200 ">
+            <p className=" text-base text-sm  text-zinc-200 ">
               {item.overview
-                ? item.overview?.slice(0, 100)
+                ? item.overview?.slice(0, 80)
                 : "No overview available"}
               ...more
             </p>

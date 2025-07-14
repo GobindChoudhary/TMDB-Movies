@@ -39,7 +39,7 @@ const Popular = () => {
         <div className=" w-full flex  gap-2 items-center ">
           <i
             onClick={() => navigate(-1)}
-            className="ri-arrow-left-line cursor-pointer text-2xl text-zinc-400 hover:text-[#6556CD]"
+            Class="ri-arrow-left-line text-3xl text-zinc-200 hover:text-[#6556CD] "
           ></i>
           <h1 className="uppercase font-bold text-2xl text-zinc-200">
             Popular

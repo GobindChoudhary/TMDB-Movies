@@ -105,13 +105,27 @@ const Detail = () => {
           <div className="flex items-center  gap-2">
             <i
               onClick={() => navigate(-1)}
-              class="ri-arrow-left-line text-3xl text-zinc-200 hover:text-[#6556CD] "
+              className="ri-arrow-left-line text-3xl text-zinc-200 hover:text-[#6556CD] "
             ></i>
             <h1 className="text-2xl text-zinc-200 font-bold ">DETAIL</h1>
           </div>
-          <div className="icon flex flex-col items-center items-center leading-none ">
-            <i class="ri-external-link-fill text-2xl text-zinc-200 hover:text-[#6556CD] "></i>
-            <h1 className="text-gray-400 font-normal text-sm/1 ">Homepage</h1>
+          <div className="icon flex flex-col items-center cursor-pointer items-center leading-none ">
+            {detail.homepage ? (
+              <>
+                {" "}
+                <i
+                  onClick={() => {
+                    window.open(detail.homepage, "_blank");
+                  }}
+                  className="ri-external-link-fill text-2xl text-zinc-200 hover:text-[#6556CD] "
+                ></i>
+                <h1 className="text-gray-400 font-normal text-sm/1 ">
+                  Homepage
+                </h1>
+              </>
+            ) : (
+              ""
+            )}
           </div>
         </div>
         {/* detail */}

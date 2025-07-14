@@ -18,19 +18,20 @@ const Topnav = () => {
   }, [query]);
 
   return (
-    <div className="h-[8vh] relative flex items-center justify-start pl-[15%]">
+    <div className="relative flex items-center justify-start pl-[15%]">
       <i className="text-zinc-400 text-2xl ri-search-line"></i>
       <input
         onChange={(e) => setquery(e.target.value)}
         value={query}
-        className="w-[50%] mx-6 h-[90%] text-zinc-200 p-5 text-base outline-none border-none bg-transeparent "
+        className="w-[50%] mx-6 h-[90%] text-zinc-200  p-5 text-lg outline-none border-none bg-transeparent "
         type="text"
         placeholder="Search Movies and Actors"
       />
+
       {query.length > 0 && (
         <i
           onClick={() => setquery("")}
-          className=" text-zinc-400 text-xl cursor-pointer ri-close-large-fill"
+          className="ri-close-line text-zinc-400 text-3xl cursor-pointer "
         ></i>
       )}
       <div className=" absolute w-[50%] max-h-[50vh] border-zinc-300 bg-black top-[90%] overflow-auto">

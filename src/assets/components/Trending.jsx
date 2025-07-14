@@ -39,15 +39,10 @@ const Trending = () => {
     <div className="h-screen w-screen px-5 overflow-x-hidden ">
       <div className="h-[10%]  px-5   flex items-center ">
         <div className=" w-full flex  gap-2 items-center ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
+          <i
             onClick={() => navigate(-1)}
-            viewBox="0 0 24 24"
-            className="cursor-pointer h-10 text-zinc-400 hover:text-[#6556CD]"
-            fill="currentColor"
-          >
-            <path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path>
-          </svg>
+            className="ri-arrow-left-line text-3xl text-zinc-200 hover:text-[#6556CD] "
+          ></i>
           <h1 className="uppercase font-bold text-2xl text-zinc-200">
             trending
           </h1>

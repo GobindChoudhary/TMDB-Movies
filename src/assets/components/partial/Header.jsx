@@ -2,13 +2,13 @@ const Header = ({ data }) => {
   return (
     <div>
       <div
-        className="w-full h-[60vh] flex flex-col p-[5%] justify-end"
+        className="w-full h-[80vh] flex flex-col p-[5%] justify-end"
         style={{
           backgroundImage: `url(https://image.tmdb.org/t/p/original/${
             data?.backdrop_path || data?.poster_path || data?.profile_path
           })`,
           backgroundSize: "cover",
-          backgroundPosition: " top ",
+          backgroundPosition: "top",
         }}
       >
         <div className="text-5xl text-white font-bold">

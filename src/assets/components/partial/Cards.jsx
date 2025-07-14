@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import noImage from "../../../../public/noImage.webp";
 const Cards = ({ data, category }) => {
